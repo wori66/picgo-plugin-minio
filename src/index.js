@@ -16,7 +16,7 @@ module.exports = ctx => {
 
         for (let i = 0, len = files.length; i < len; i++) {
           let file = files[i]
-          if (file.type === 'minio' && await helper.isFileExistInMinio(file.fileName)) {
+          if (file.type === 'minio' /*&& await helper.isFileExistInMinio(file.fileName)*/) {
             await helper.deleteFileInMinio(file.fileName)
           }
         }
